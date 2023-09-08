@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.9
+Type=Application
+Name=LXFree for Java
+Comment=Freeing lighting designers for more important stuff!
+Exec=java -jar /usr/share/claudeheintzdesign-lxseries/LXFreeForJava.jar %f
+Icon=/usr/share/claudeheintzdesign-lxseries/LXicon.png
+MimeType=application/lxxplot;
+Actions=;

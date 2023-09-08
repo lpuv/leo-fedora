@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>claudeheintzdesign-lxfreeforjava.desktop</id>
+  <name>LXFreeForJava</name>
+  <summary>Edit light plot files</summary>
+ 
+  <description>
+    <p>LXFree for Java allows creation of light plots and reports.</p>
+  </description>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://www.claudeheintzdesign.com/lx/lxfreejavahelp/images/window.jpg</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://www.claudeheintzdesign.com/lx/lxfreejava_about.html</url>
+
+  <url type="donation">https://www.claudeheintzdesign.com/lx/lxfreejava_donate.html</url>
+  <url type="help">https://www.claudeheintzdesign.com/lx/lxfreejavahelp/index.html</url>
+  <update_contact>claudeheintzdesign@gmail.com</update_contact>
+  <compulsory_for_desktop>GNOME</compulsory_for_desktop>
+
+  <kudos>
+    <kudo>AppMenu</kudo>
+  </kudos>
+</component>
