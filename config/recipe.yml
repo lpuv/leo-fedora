@@ -196,4 +196,3 @@ modules:
       - Godot: org.godotengine.Godot
       - FontDownloader: org.gustavoperedo.FontDownloader
       - KiCad: org.kicad.KiCad
-
