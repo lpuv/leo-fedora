@@ -129,3 +129,4 @@ firstboot:
     - org.libreoffice.LibreOffice
     - io.gitlab.librewolf-community
     - com.valvesoftware.Steam
+    - org.freedesktop.Platform.ffmpeg-full
