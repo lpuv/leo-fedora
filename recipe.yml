@@ -93,8 +93,7 @@ rpm:
     - firefox-langpacks
     - mesa-va-drivers-freeworld
     - libavfilter-free
-    - libavformat-free
-    - libavcodec-free 
+    - libavformat-free 
     - libavutil-free 
     - libpostproc-free 
     - libswresample-free 
