@@ -92,12 +92,12 @@ rpm:
     - firefox
     - firefox-langpacks
     - mesa-va-drivers-freeworld
-    - libavfilter-free
-    - libavformat-free 
-    - libavutil-free 
-    - libpostproc-free 
-    - libswresample-free 
-    - libswscale-free
+      #- libavfilter-free
+      #    - libavformat-free 
+      #- libavutil-free 
+      #- libpostproc-free 
+      #- libswresample-free 
+      #- libswscale-free
     - toolbox
     - steam-devices
 # Configuration for the "first boot" experience, which is available after login.
