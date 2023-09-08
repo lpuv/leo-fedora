@@ -71,7 +71,6 @@ rpm:
     # - tilix
 
     - distrobox
-    - rpmfusion-free-release rpmfusion-nonfree-release
     - intel-media-driver 
     - libva-intel-driver
     - mesa-va-drivers-freeworld
