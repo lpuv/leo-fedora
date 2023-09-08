@@ -48,6 +48,11 @@ rpm:
   repos:
     # Example (which also demonstrates version number expansion):
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/ayoungdukie/Personal_Repo/repo/fedora-%FEDORA_VERSION%/ayoungdukie-Personal_Repo-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/observeroftime/betterdiscordctl/repo/fedora-%FEDORA_VERSION%/observeroftime-betterdiscordctl-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/rob72/86Box/repo/fedora-%FEDORA_VERSION%/rob72-86Box-%FEDORA_VERSION%.repo
+    - https://download.opensuse.org/repositories/home:/jejb1:/Element/Fedora_38/home:jejb1:Element.repo
+    - https://rpm.librewolf.net/librewolf-repo.repo
 
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
@@ -65,13 +70,38 @@ rpm:
     # Example:
     # - tilix
 
+    - distrobox
+    - rpmfusion-free-release rpmfusion-nonfree-release
+    - intel-media-driver 
+    - libva-intel-driver
+    - mesa-va-drivers-freeworld
+    - mesa-vdpau-drivers-freeworld
+    - ffmpeg
+    - gstreamer1-plugin-libav
+    - gstreamer1-plugins-bad-free-extras 
+    - gstreamer1-plugins-ugly 
+    - gstreamer1-vaapi 
+    - steam-devices
+    - wezterm
+    - https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
+ 
+
     # These RPMs will be removed from the system image. This step happens during
     # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
     - firefox
     - firefox-langpacks
-
+    - mesa-va-drivers-freeworld
+    - libavfilter-free
+    - libavformat-free
+    - libavcodec-free 
+    - libavutil-free 
+    - libpostproc-free 
+    - libswresample-free 
+    - libswscale-free
+    - toolbox
+    - steam-devices
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:
   # Whether to embed "yafti" into the OS image and configure it to autostart,
@@ -89,3 +119,15 @@ firstboot:
   flatpaks:
     - io.github.celluloid_player.Celluloid
     - org.kde.krita
+    - com.github.tchx84.Flatseal
+    - com.github.zadam.trilium
+    - com.moonlight_stream.Moonlight
+    - com.spotify.Client
+    - com.valvesoftware.SteamLink
+    - com.yubico.yubioath
+    - org.localsend.localsend_app
+    - org.prismlauncher.PrismLauncher
+    - org.bluesabre.MenuLibre
+    - org.libreoffice.LibreOffice
+    - io.gitlab.librewolf-community
+    - com.valvesoftware.Steam

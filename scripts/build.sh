@@ -51,6 +51,11 @@ run_scripts() {
 }
 run_scripts "pre"
 
+
+# RPMFusion
+rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+
 # Install RPMs.
 get_yaml_array install_rpms '.rpm.install[]'
 if [[ ${#install_rpms[@]} -gt 0 ]]; then
@@ -68,6 +73,12 @@ if [[ ${#remove_rpms[@]} -gt 0 ]]; then
     rpm-ostree override remove "${remove_rpms[@]}"
     echo "---"
 fi
+
+mkdir -p /etc/distrobox
+echo "container_image_default=\"registry.fedoraproject.org/fedora-toolbox:$(rpm -E %fedora)\"" >> /etc/distrobox/distrobox.conf
+sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=check/' /etc/rpm-ostreed.conf
+systemctl enable rpm-ostreed-automatic.timer
+systemctl enable dconf-update.service
 
 # Toggle yafti, which provides the "first boot" experience, https://github.com/ublue-os/yafti.
 FIRSTBOOT_DATA="/usr/share/ublue-os/firstboot"
