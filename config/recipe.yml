@@ -1,5 +1,4 @@
 # This file can only be edited inside the uBlue image's git repository.
-
 # The image will be at "ghcr.io/yourusername/name".
 name: leo-fedora
 
@@ -198,4 +197,3 @@ modules:
       - FontDownloader: org.gustavoperedo.FontDownloader
       - KiCad: org.kicad.KiCad
 
-  
