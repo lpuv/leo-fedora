@@ -53,6 +53,7 @@ rpm:
     - https://copr.fedorainfracloud.org/coprs/rob72/86Box/repo/fedora-%FEDORA_VERSION%/rob72-86Box-%FEDORA_VERSION%.repo
     - https://download.opensuse.org/repositories/home:/jejb1:/Element/Fedora_38/home:jejb1:Element.repo
     - https://rpm.librewolf.net/librewolf-repo.repo
+    - http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
 
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
@@ -83,7 +84,7 @@ rpm:
     - steam-devices
     - wezterm
     - https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
- 
+    - VirtualBox
 
     # These RPMs will be removed from the system image. This step happens during
     # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
