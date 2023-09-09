@@ -115,6 +115,7 @@ firstboot:
   # the "just setup-flatpaks" command from our "custom.just" template file.
   # This is just an example selection:
   flatpaks:
+    - runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/23.08
     - io.github.celluloid_player.Celluloid
     - org.kde.krita
     - com.github.tchx84.Flatseal
@@ -129,4 +130,4 @@ firstboot:
     - org.libreoffice.LibreOffice
     - io.gitlab.librewolf-community
     - com.valvesoftware.Steam
-    - org.freedesktop.Platform.ffmpeg-full
+    - runtime/org.freedesktop.Platform.ffmpeg-full/x86_64/23.08
