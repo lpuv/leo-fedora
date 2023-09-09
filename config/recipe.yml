@@ -42,6 +42,7 @@ modules:
                   # should be added into /usr/etc/ as that is the proper "distro"
                   # config directory on ostree. Read more in the files module's README
 
+<<<<<<< HEAD
   - type: rpm-ostree
     # A list of urls of ".repo" files that should be added to your system.
     # This is the proper way to add custom COPR repos to your image.
@@ -163,7 +164,6 @@ modules:
   #- type: script
   #  scripts:
   #    - codecs2.sh
-
   - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
               #  will be installed and set up
     custom-flatpaks: # this section is optional
