@@ -71,6 +71,7 @@ rpm:
     # Example:
     # - tilix
     - java-11-openjdk-devel
+    - xwaylandvideobridge
     - distrobox
     - intel-media-driver 
     - libva-intel-driver
