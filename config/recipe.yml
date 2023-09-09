@@ -69,7 +69,7 @@ rpm:
     # Add your own below:
     # Example:
     # - tilix
-
+    - java-11-openjdk-devel
     - distrobox
     - intel-media-driver 
     - libva-intel-driver
