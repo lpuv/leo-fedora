@@ -131,5 +131,4 @@ firstboot:
     - org.bluesabre.MenuLibre
     - org.libreoffice.LibreOffice
     - io.gitlab.librewolf-community
-    - com.valvesoftware.Steam
     - runtime/org.freedesktop.Platform.ffmpeg-full/x86_64/23.08
