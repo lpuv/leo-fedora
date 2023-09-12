@@ -74,8 +74,7 @@ rpm:
     # - tilix
     - onedrive
     - xwaylandvideobridge
-    - distrobox
-    - intel-media-driver 
+    - distrobox 
     - libva-intel-driver
     - mesa-va-drivers-freeworld
     - mesa-vdpau-drivers-freeworld
@@ -95,13 +94,21 @@ rpm:
     - make
     - nodejs
     - latte-dock
+    - intel-gpu-tools
+    - lm_sensors
+    - intel-media-driver
     - binutils
     - bat
     - gcc-c++
     - imsettings
-    - ibus-rime
     - flameshot
     - onedriver
+    - fcitx5-chinese-addons
+    - fcitx5-configtool
+    - fcitx5-gtk
+    - fcitx5-qt
+    - fcitx5-table-extra
+    - fcitx5-table-other
 
     # These RPMs will be removed from the system image. This step happens during
     # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
