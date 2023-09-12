@@ -51,6 +51,7 @@ rpm:
     - https://copr.fedorainfracloud.org/coprs/ayoungdukie/Personal_Repo/repo/fedora-%FEDORA_VERSION%/ayoungdukie-Personal_Repo-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/observeroftime/betterdiscordctl/repo/fedora-%FEDORA_VERSION%/observeroftime-betterdiscordctl-%FEDORA_VERSION%.repo
     - https://copr.fedorainfracloud.org/coprs/rob72/86Box/repo/fedora-%FEDORA_VERSION%/rob72-86Box-%FEDORA_VERSION%.repo
+    - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%FEDORA_VERSION%/jstaf-onedriver-%FEDORA_VERSION%.repo
     - https://download.opensuse.org/repositories/home:/jejb1:/Element/Fedora_38/home:jejb1:Element.repo
     - https://rpm.librewolf.net/librewolf-repo.repo
     - http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
@@ -100,6 +101,7 @@ rpm:
     - imsettings
     - ibus-rime
     - flameshot
+    - onedriver
 
     # These RPMs will be removed from the system image. This step happens during
     # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
