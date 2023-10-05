@@ -1,396 +1,199 @@
 # This file can only be edited inside the uBlue image's git repository.
-# This file can only be edited inside the uBlue image's git repository.
-# The image will be at "ghcr.io/yourusername/name".
+
 # The image will be at "ghcr.io/yourusername/name".
 name: leo-fedora
-name: leo-fedora
-
 
 # The native container image to build on top of.
-# The native container image to build on top of.
-# Warning: Non-uBlue images might not work properly, due to missing components.
 # Warning: Non-uBlue images might not work properly, due to missing components.
 base-image: ghcr.io/ublue-os/kinoite-main
-base-image: ghcr.io/ublue-os/kinoite-main
-image-version: 39 # latest is also supported if you want new updates ASAP
 image-version: 39 # latest is also supported if you want new updates ASAP
 
-
-# This description will be visible in the container metadata.
 # This description will be visible in the container metadata.
 description: This is my personal OS image.
-description: This is my personal OS image.
-
-
 
 
 modules:
-modules:
-  - type: script
   - type: script
     scripts:
-    scripts:
-      - power-profiles.sh
       - power-profiles.sh
       #- codecs.sh
-      #- codecs.sh
-      # this sets up the proper policy & signing files for signed images to work
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
-      - signing.sh
-  - type: bling # configure what to pull in from ublue-os/bling
   - type: bling # configure what to pull in from ublue-os/bling
     install:
-    install:
-      - justfiles # add "!include /usr/share/ublue-os/just/100-bling.just"
       - justfiles # add "!include /usr/share/ublue-os/just/100-bling.just"
                   # in your custom.just (added by default) or local justfile
-                  # in your custom.just (added by default) or local justfile
-      - nix-installer # shell shortcuts for determinate system's nix installers
       - nix-installer # shell shortcuts for determinate system's nix installers
       - ublue-os-wallpapers
-      - ublue-os-wallpapers
-      # - ublue-update # https://github.com/ublue-os/ublue-update
       # - ublue-update # https://github.com/ublue-os/ublue-update
       # - 1password # install 1Password (stable) and `op` CLI tool
-      # - 1password # install 1Password (stable) and `op` CLI tool
-      # - dconf-update-service # a service unit that updates the dconf db on boot
       # - dconf-update-service # a service unit that updates the dconf db on boot
       # - devpod # https://devpod.sh/ as an rpm
-      # - devpod # https://devpod.sh/ as an rpm
-      # - gnome-vrr # enables gnome-vrr for your image
       # - gnome-vrr # enables gnome-vrr for your image
       # - container-tools # installs container-related tools onto /usr/bin: kind, kubectx, docker-compose and kubens
-      # - container-tools # installs container-related tools onto /usr/bin: kind, kubectx, docker-compose and kubens
-      # - laptop # installs TLP and configures your system for laptop usage
       # - laptop # installs TLP and configures your system for laptop usage
       # - flatpaksync # allows synchronization of user-installed flatpaks, see separate documentation section
-      # - flatpaksync # allows synchronization of user-installed flatpaks, see separate documentation section
-  - type: files
   - type: files
     files:
-    files:
-      - usr: /usr # copy static configurations
       - usr: /usr # copy static configurations
                   #
-                  #
-                  # copies config/files/usr into your image's /usr
                   # copies config/files/usr into your image's /usr
                   #
-                  #
-                  # configuration you wish to end up in /etc/ on the booted system
                   # configuration you wish to end up in /etc/ on the booted system
                   # should be added into /usr/etc/ as that is the proper "distro"
-                  # should be added into /usr/etc/ as that is the proper "distro"
-                  # config directory on ostree. Read more in the files module's README
                   # config directory on ostree. Read more in the files module's README
 
-
-  - type: rpm-ostree
   - type: rpm-ostree
     # A list of urls of ".repo" files that should be added to your system.
-    # A list of urls of ".repo" files that should be added to your system.
-    # This is the proper way to add custom COPR repos to your image.
     # This is the proper way to add custom COPR repos to your image.
     # Tip: Use `%OS_VERSION%` instead of static Fedora version numbers,
-    # Tip: Use `%OS_VERSION%` instead of static Fedora version numbers,
-    # so that your repos automatically use your image's actual Fedora version,
     # so that your repos automatically use your image's actual Fedora version,
     # which greatly simplifies future maintenance of your custom recipe.
-    # which greatly simplifies future maintenance of your custom recipe.
-    repos:
     repos:
       # Example (which also demonstrates version number expansion):
-      # Example (which also demonstrates version number expansion):
-      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/ayoungdukie/Personal_Repo/repo/fedora-%OS_VERSION%/ayoungdukie-Personal_Repo-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/ayoungdukie/Personal_Repo/repo/fedora-%OS_VERSION%/ayoungdukie-Personal_Repo-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/observeroftime/betterdiscordctl/repo/fedora-%OS_VERSION%/observeroftime-betterdiscordctl-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/observeroftime/betterdiscordctl/repo/fedora-%OS_VERSION%/observeroftime-betterdiscordctl-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/rob72/86Box/repo/fedora-%OS_VERSION%/rob72-86Box-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/rob72/86Box/repo/fedora-%OS_VERSION%/rob72-86Box-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-%OS_VERSION%.repo
       - https://download.opensuse.org/repositories/home:/jejb1:/Element/Fedora_38/home:jejb1:Element.repo
-      - https://download.opensuse.org/repositories/home:/jejb1:/Element/Fedora_38/home:jejb1:Element.repo
-      - https://rpm.librewolf.net/librewolf-repo.repo
       - https://rpm.librewolf.net/librewolf-repo.repo
       - https://copr.fedorainfracloud.org/coprs/mariolimonciello/power-profiles-daemon/repo/fedora-%OS_VERSION%/mariolimonciello-power-profiles-daemon-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/mariolimonciello/power-profiles-daemon/repo/fedora-%OS_VERSION%/mariolimonciello-power-profiles-daemon-%OS_VERSION%.repo
-      #- http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
       #- http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-      - https://rpm.craftcat.dev/leo.repo
       - https://rpm.craftcat.dev/leo.repo
       - https://negativo17.org/repos/fedora-multimedia.repo
-      - https://negativo17.org/repos/fedora-multimedia.repo
-  
-  
-    # These RPMs will be installed from your enabled repositories (Fedora's own
+
     # These RPMs will be installed from your enabled repositories (Fedora's own
     # repos, extra "repos" you've added, etc). The installation is automatically
-    # repos, extra "repos" you've added, etc). The installation is automatically
-    # performed via rpm-ostree during the image build, and will be pre-installed
     # performed via rpm-ostree during the image build, and will be pre-installed
     # at the "system level" in the final image.
-    # at the "system level" in the final image.
-    install:
     install:
       # Needed for yafti (the first boot installer). Remove if you're not using yafti.
-      # Needed for yafti (the first boot installer). Remove if you're not using yafti.
-      - python3-pip
       - python3-pip
       - iasl
-      - iasl
-      # GNOME's GTK4 theme, Libadwaita. Already included in Silverblue, but not
       # GNOME's GTK4 theme, Libadwaita. Already included in Silverblue, but not
       # other spins. You can remove if you aren't using yafti, but many native
-      # other spins. You can remove if you aren't using yafti, but many native
-      # apps and binaries require it, so it's a good idea to always include it
       # apps and binaries require it, so it's a good idea to always include it
       # if you ever download or compile any custom software on your machine.
-      # if you ever download or compile any custom software on your machine.
-      - libadwaita
       - libadwaita
       # Add your own below:
-      # Add your own below:
-      # Example:
       # Example:
       # - tilix
-      # - tilix
-      - onedrive
       - onedrive
       - xwaylandvideobridge
-      - xwaylandvideobridge
-      - distrobox 
-      - distrobox 
-      - power-profiles-daemon
+      - distrobox
       - power-profiles-daemon
         #- libva-intel-driver
-        #- libva-intel-driver
-      - mesa-va-drivers-freeworld
       - mesa-va-drivers-freeworld
       #- mesa-vdpau-drivers-freeworld
-      #- mesa-vdpau-drivers-freeworld
-      #- mesa-va-drivers-freeworld-23.2.1-2.fc39.x86_64
       #- mesa-va-drivers-freeworld-23.2.1-2.fc39.x86_64
       #- mesa-va-drivers-1
-      #- mesa-va-drivers-1
-      - libavcodec-freeworld
       - libavcodec-freeworld
       - ffmpeg
-      - ffmpeg
-      - radeontop
       - radeontop
       - gstreamer1-plugin-libav
-      - gstreamer1-plugin-libav
-      - gstreamer1-plugins-bad-free-extras 
-      - gstreamer1-plugins-bad-free-extras 
-      - gstreamer1-plugins-ugly 
-      - gstreamer1-plugins-ugly 
-      - gstreamer1-vaapi 
-      - gstreamer1-vaapi 
-      - steam-devices
+      - gstreamer1-plugins-bad-free-extras
+      - gstreamer1-plugins-ugly
+      - gstreamer1-vaapi
       - steam-devices
       - mesa-dri-drivers
-      - mesa-dri-drivers
-      - wezterm
       - wezterm
       - appimagelauncher
-      - appimagelauncher
-      #- VirtualBox
       #- VirtualBox
       - zsh
-      - zsh
-      - tailscale
       - tailscale
       - neofetch
-      - neofetch
-      - python3-neovim
       - python3-neovim
       - make
-      - make
-      - nodejs
       - nodejs
       - latte-dock
-      - latte-dock
-      #- intel-gpu-tools
       #- intel-gpu-tools
       - lm_sensors
-      - lm_sensors
-      #- intel-media-driver
       #- intel-media-driver
       - binutils
-      - binutils
-      - bat
       - bat
       - gcc-c++
-      - gcc-c++
-      - imsettings
       - imsettings
       - flameshot
-      - flameshot
-      - onedriver
       - onedriver
       - fcitx5-chinese-addons
-      - fcitx5-chinese-addons
-      - fcitx5-configtool
       - fcitx5-configtool
       - fcitx5-gtk
-      - fcitx5-gtk
-      - fcitx5-qt
       - fcitx5-qt
       - fcitx5-table-extra
-      - fcitx5-table-extra
-      - fcitx5-table-other
       - fcitx5-table-other
       - virt-manager
-      - virt-manager
-      - tlp
       - tlp
       - tlp-rdw
-      - tlp-rdw
-      - powertop
       - powertop
 #     - dnf5
-#     - dnf5
-#     - dnf5-plugins
 #     - dnf5-plugins
       - fedora-packager-kerberos
-      - fedora-packager-kerberos
-      - krb5-workstation
       - krb5-workstation
       - krb5-pkinit
-      - krb5-pkinit
-      - libsecret
       - libsecret
      #- librewolf
-     #- librewolf
-      - gnome-keyring
       - gnome-keyring
       - mailspring
-      - mailspring
-      - fedora-packager
       - fedora-packager
       - fedora-review
-      - fedora-review
-      - rust2rpm
       - rust2rpm
       - copr-cli
-      - copr-cli
-      - awscli2
       - awscli2
       - libimobiledevice-utils
-      - libimobiledevice-utils
-      - btop
       - btop
       - gstreamer1-plugin-openh264
-      - gstreamer1-plugin-openh264
-      - mozilla-openh264
       - mozilla-openh264
 
-
-
-
-      # These RPMs will be removed from the system image. This step happens during
       # These RPMs will be removed from the system image. This step happens during
       # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
-      # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
-    remove:
     remove:
       # Remove the native firefox (from Fedora) in favor of the Flatpak.
-      # Remove the native firefox (from Fedora) in favor of the Flatpak.
-      - firefox
       - firefox
       - firefox-langpacks
-      - firefox-langpacks
-      #- mesa-vdpau-drivers
       #- mesa-vdpau-drivers
         #- libavfilter-free
-        #- libavfilter-free
-        #    - libavformat-free 
-        #    - libavformat-free 
-        #- libavutil-free 
-        #- libavutil-free 
-        #- libpostproc-free 
-        #- libpostproc-free 
-        #- libswresample-free 
-        #- libswresample-free 
-        #- libswscale-free
+        #    - libavformat-free
+        #- libavutil-free
+        #- libpostproc-free
+        #- libswresample-free
         #- libswscale-free
       - toolbox
-      - toolbox
-        #- steam-devices
         #- steam-devices
   #- type: script
-  #- type: script
-  #  scripts:
   #  scripts:
   #    - codecs2.sh
-  #    - codecs2.sh
-  - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
+
   - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
               #  will be installed and set up
-              #  will be installed and set up
-    custom-flatpaks: # this section is optional
     custom-flatpaks: # this section is optional
       - Gamescope: org.freedesktop.Platform.VulkanLayer.gamescope
-      - Gamescope: org.freedesktop.Platform.VulkanLayer.gamescope
-      - Celluloid: io.github.celluloid_player.Celluloid
       - Celluloid: io.github.celluloid_player.Celluloid
       - Krita: org.kde.krita
-      - Krita: org.kde.krita
-      - Flatseal: com.github.tchx84.Flatseal
       - Flatseal: com.github.tchx84.Flatseal
       - Trilium: com.github.zadam.trilium
-      - Trilium: com.github.zadam.trilium
-      - Moonlight: com.moonlight_stream.Moonlight
       - Moonlight: com.moonlight_stream.Moonlight
       - Spotify: com.spotify.Client
-      - Spotify: com.spotify.Client
-      - SteamLink: com.valvesoftware.SteamLink
       - SteamLink: com.valvesoftware.SteamLink
       - YubicoAuth: com.yubico.yubioath
-      - YubicoAuth: com.yubico.yubioath
-      - LocalSend: org.localsend.localsend_app
       - LocalSend: org.localsend.localsend_app
       - PrismLauncher: org.prismlauncher.PrismLauncher
-      - PrismLauncher: org.prismlauncher.PrismLauncher
-      - MenuLibre: org.bluesabre.MenuLibre
       - MenuLibre: org.bluesabre.MenuLibre
       - LibreOffice: org.libreoffice.LibreOffice
-      - LibreOffice: org.libreoffice.LibreOffice
-#    - io.gitlab.librewolf-community
 #    - io.gitlab.librewolf-community
       #- org.freedesktop.Platform.ffmpeg-full
-      #- org.freedesktop.Platform.ffmpeg-full
-      - Discord: com.discordapp.Discord
       - Discord: com.discordapp.Discord
       - UngoogledChromium: com.github.Eloston.UngoogledChromium
-      - UngoogledChromium: com.github.Eloston.UngoogledChromium
-      - Protontricks: com.github.Matoking.protontricks
       - Protontricks: com.github.Matoking.protontricks
       - TLPui: com.github.d4nj1.tlpui
-      - TLPui: com.github.d4nj1.tlpui
-      - PDFarranger: com.github.jeromerobert.pdfarranger
       - PDFarranger: com.github.jeromerobert.pdfarranger
       - Xournalpp: com.github.xournalpp.xournalpp
-      - Xournalpp: com.github.xournalpp.xournalpp
-      - Flemozi: dev.krtirtho.Flemozi
       - Flemozi: dev.krtirtho.Flemozi
       - Kooha: io.github.seadve.Kooha
-      - Kooha: io.github.seadve.Kooha
-      - MissionCenter: io.missioncenter.MissionCenter
       - MissionCenter: io.missioncenter.MissionCenter
       - Lutris: net.lutris.Lutris
-      - Lutris: net.lutris.Lutris
-      - MangoHud: org.freedesktop.Platform.VulkanLayer.MangoHud
       - MangoHud: org.freedesktop.Platform.VulkanLayer.MangoHud
       - Godot: org.godotengine.Godot
-      - Godot: org.godotengine.Godot
       - FontDownloader: org.gustavoperedo.FontDownloader
-      - FontDownloader: org.gustavoperedo.FontDownloader
-      - KiCad: org.kicad.KiCad
       - KiCad: org.kicad.KiCad
