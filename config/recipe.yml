@@ -63,7 +63,7 @@ modules:
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       - https://rpm.craftcat.dev/leo.repo
       - https://negativo17.org/repos/fedora-multimedia.repo
-
+  
     # These RPMs will be installed from your enabled repositories (Fedora's own
     # repos, extra "repos" you've added, etc). The installation is automatically
     # performed via rpm-ostree during the image build, and will be pre-installed
@@ -82,7 +82,7 @@ modules:
       # - tilix
       - onedrive
       - xwaylandvideobridge
-      - distrobox
+      - distrobox 
       - power-profiles-daemon
         #- libva-intel-driver
       - mesa-va-drivers-freeworld
@@ -93,9 +93,9 @@ modules:
       - ffmpeg
       - radeontop
       - gstreamer1-plugin-libav
-      - gstreamer1-plugins-bad-free-extras
-      - gstreamer1-plugins-ugly
-      - gstreamer1-vaapi
+      - gstreamer1-plugins-bad-free-extras 
+      - gstreamer1-plugins-ugly 
+      - gstreamer1-vaapi 
       - steam-devices
       - mesa-dri-drivers
       - wezterm
@@ -145,6 +145,7 @@ modules:
       - btop
       - gstreamer1-plugin-openh264
       - mozilla-openh264
+
       # These RPMs will be removed from the system image. This step happens during
       # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
     remove:
@@ -153,10 +154,10 @@ modules:
       - firefox-langpacks
       #- mesa-vdpau-drivers
         #- libavfilter-free
-        #    - libavformat-free
-        #- libavutil-free
-        #- libpostproc-free
-        #- libswresample-free
+        #    - libavformat-free 
+        #- libavutil-free 
+        #- libpostproc-free 
+        #- libswresample-free 
         #- libswscale-free
       - toolbox
         #- steam-devices
@@ -196,3 +197,5 @@ modules:
       - Godot: org.godotengine.Godot
       - FontDownloader: org.gustavoperedo.FontDownloader
       - KiCad: org.kicad.KiCad
+
+  
