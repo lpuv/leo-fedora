@@ -114,6 +114,8 @@ rpm:
     - tlp-rdw
     - bottles
     - powertop
+    - dnf5
+    - dnf5-plugins
 
     # These RPMs will be removed from the system image. This step happens during
     # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
