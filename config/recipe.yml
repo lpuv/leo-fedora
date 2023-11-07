@@ -162,3 +162,20 @@ firstboot:
     - org.libreoffice.LibreOffice
     - io.gitlab.librewolf-community
     - runtime/org.freedesktop.Platform.ffmpeg-full/x86_64/23.08
+    - com.discordapp.Discord
+    - com.github.Eloston.UngoogledChromium
+    - com.github.Matoking.protontricks
+    - com.github.d4nj1.tlpui
+    - com.github.jeromerobert.pdfarranger
+    - com.github.xournalpp.xournalpp
+    - dev.krtirtho.Flemozi
+    - io.github.celluloid_player.Celluloid
+    - io.github.seadve.Kooha
+    - io.missioncenter.MissionCenter
+    - net.lutris.Lutris
+    - org.freedesktop.Platform.VulkanLayer.MangoHud
+    - org.godotengine.Godot
+    - org.gustavoperedo.FontDownloader
+    - org.kicad.KiCad
+    - org.localsend.localsend_app
+    - org.prismlauncher.PrismLauncher
