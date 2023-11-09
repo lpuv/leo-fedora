@@ -120,6 +120,7 @@ rpm:
     - krb5-workstation
     - krb5-pkinit
     - libsecret
+    - librewolf
 
     # These RPMs will be removed from the system image. This step happens during
     # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
@@ -164,7 +165,7 @@ firstboot:
     - org.prismlauncher.PrismLauncher
     - org.bluesabre.MenuLibre
     - org.libreoffice.LibreOffice
-    - io.gitlab.librewolf-community
+#    - io.gitlab.librewolf-community
     - runtime/org.freedesktop.Platform.ffmpeg-full/x86_64/23.08
     - com.discordapp.Discord
     - com.github.Eloston.UngoogledChromium
