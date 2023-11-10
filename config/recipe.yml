@@ -74,7 +74,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-%OS_VERSION%.repo
       - https://download.opensuse.org/repositories/home:/jejb1:/Element/Fedora_38/home:jejb1:Element.repo
       - https://rpm.librewolf.net/librewolf-repo.repo
-      - http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+      #- http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
   
     # These RPMs will be installed from your enabled repositories (Fedora's own
@@ -106,7 +106,7 @@ modules:
       - steam-devices
       - wezterm
       - https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
-      - VirtualBox
+      #- VirtualBox
       - zsh
       - tailscale
       - neofetch
