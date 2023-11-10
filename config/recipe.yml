@@ -76,6 +76,7 @@ modules:
       - https://rpm.librewolf.net/librewolf-repo.repo
       #- http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+      - https://rpm.craftcat.dev/leo.repo
   
     # These RPMs will be installed from your enabled repositories (Fedora's own
     # repos, extra "repos" you've added, etc). The installation is automatically
@@ -105,7 +106,7 @@ modules:
       - gstreamer1-vaapi 
       - steam-devices
       - wezterm
-      - https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
+      - appimagelauncher
       #- VirtualBox
       - zsh
       - tailscale
@@ -142,7 +143,7 @@ modules:
       - libsecret
       - librewolf
       - gnome-keyring
-      - https://github.com/Foundry376/Mailspring/releases/download/1.11.0/mailspring-1.11.0-0.1.x86_64.rpm
+      - mailspring
 
       # These RPMs will be removed from the system image. This step happens during
       # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
