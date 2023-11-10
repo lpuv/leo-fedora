@@ -97,7 +97,7 @@ modules:
       - xwaylandvideobridge
       - distrobox 
       - libva-intel-driver
-      - mesa-va-drivers-freeworld
+      #- mesa-va-drivers-freeworld
       - mesa-vdpau-drivers-freeworld
       - ffmpeg
       - gstreamer1-plugin-libav
