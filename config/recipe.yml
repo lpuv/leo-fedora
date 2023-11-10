@@ -163,7 +163,7 @@ modules:
   - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
               #  will be installed and set up
     custom-flatpaks: # this section is optional
-      - runtime/org.freedesktop.Platform.VulkanLayer.gamescope/x86_64/23.08
+      - org.freedesktop.Platform.VulkanLayer.gamescope
       - io.github.celluloid_player.Celluloid
       - org.kde.krita
       - com.github.tchx84.Flatseal
@@ -177,7 +177,7 @@ modules:
       - org.bluesabre.MenuLibre
       - org.libreoffice.LibreOffice
 #    - io.gitlab.librewolf-community
-      - runtime/org.freedesktop.Platform.ffmpeg-full/x86_64/23.08
+      - org.freedesktop.Platform.ffmpeg-full
       - com.discordapp.Discord
       - com.github.Eloston.UngoogledChromium
       - com.github.Matoking.protontricks
