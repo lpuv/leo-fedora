@@ -62,16 +62,16 @@ modules:
   - type: rpm-ostree
     # A list of urls of ".repo" files that should be added to your system.
     # This is the proper way to add custom COPR repos to your image.
-    # Tip: Use `%FEDORA_VERSION%` instead of static Fedora version numbers,
+    # Tip: Use `%OS_VERSION%` instead of static Fedora version numbers,
     # so that your repos automatically use your image's actual Fedora version,
     # which greatly simplifies future maintenance of your custom recipe.
     repos:
       # Example (which also demonstrates version number expansion):
-      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/ayoungdukie/Personal_Repo/repo/fedora-%FEDORA_VERSION%/ayoungdukie-Personal_Repo-%FEDORA_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/observeroftime/betterdiscordctl/repo/fedora-%FEDORA_VERSION%/observeroftime-betterdiscordctl-%FEDORA_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/rob72/86Box/repo/fedora-%FEDORA_VERSION%/rob72-86Box-%FEDORA_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%FEDORA_VERSION%/jstaf-onedriver-%FEDORA_VERSION%.repo
+      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/ayoungdukie/Personal_Repo/repo/fedora-%OS_VERSION%/ayoungdukie-Personal_Repo-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/observeroftime/betterdiscordctl/repo/fedora-%OS_VERSION%/observeroftime-betterdiscordctl-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/rob72/86Box/repo/fedora-%OS_VERSION%/rob72-86Box-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/jstaf/onedriver/repo/fedora-%OS_VERSION%/jstaf-onedriver-%OS_VERSION%.repo
       - https://download.opensuse.org/repositories/home:/jejb1:/Element/Fedora_38/home:jejb1:Element.repo
       - https://rpm.librewolf.net/librewolf-repo.repo
       - http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
