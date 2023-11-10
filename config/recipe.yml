@@ -165,38 +165,35 @@ modules:
   - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
               #  will be installed and set up
     custom-flatpaks: # this section is optional
-      #- org.freedesktop.Platform.VulkanLayer.gamescope
-      - io.github.celluloid_player.Celluloid
-      - org.kde.krita
-      - com.github.tchx84.Flatseal
-      - com.github.zadam.trilium
-      - com.moonlight_stream.Moonlight
-      - com.spotify.Client
-      - com.valvesoftware.SteamLink
-      - com.yubico.yubioath
-      - org.localsend.localsend_app
-      - org.prismlauncher.PrismLauncher
-      - org.bluesabre.MenuLibre
-      - org.libreoffice.LibreOffice
+      - Gamescope: org.freedesktop.Platform.VulkanLayer.gamescope
+      - Celluloid: io.github.celluloid_player.Celluloid
+      - Krita: org.kde.krita
+      - Flatseal: com.github.tchx84.Flatseal
+      - Trilium: com.github.zadam.trilium
+      - Moonlight: com.moonlight_stream.Moonlight
+      - Spotify: com.spotify.Client
+      - SteamLink: com.valvesoftware.SteamLink
+      - YubicoAuth: com.yubico.yubioath
+      - LocalSend: org.localsend.localsend_app
+      - PrismLauncher: org.prismlauncher.PrismLauncher
+      - MenuLibre: org.bluesabre.MenuLibre
+      - LibreOffice: org.libreoffice.LibreOffice
 #    - io.gitlab.librewolf-community
       #- org.freedesktop.Platform.ffmpeg-full
-      - com.discordapp.Discord
-      - com.github.Eloston.UngoogledChromium
-      - com.github.Matoking.protontricks
-      - com.github.d4nj1.tlpui
-      - com.github.jeromerobert.pdfarranger
-      - com.github.xournalpp.xournalpp
-      - dev.krtirtho.Flemozi
-      - io.github.celluloid_player.Celluloid
-      - io.github.seadve.Kooha
-      - io.missioncenter.MissionCenter
-      - net.lutris.Lutris
-      - org.freedesktop.Platform.VulkanLayer.MangoHud
-      - org.godotengine.Godot
-      - org.gustavoperedo.FontDownloader
-      - org.kicad.KiCad
-      - org.localsend.localsend_app
-      - org.prismlauncher.PrismLauncher
+      - Discord: com.discordapp.Discord
+      - UngoogledChromium: com.github.Eloston.UngoogledChromium
+      - Protontricks: com.github.Matoking.protontricks
+      - TLPui: com.github.d4nj1.tlpui
+      - PDFarranger: com.github.jeromerobert.pdfarranger
+      - Xournalpp: com.github.xournalpp.xournalpp
+      - Flemozi: dev.krtirtho.Flemozi
+      - Kooha: io.github.seadve.Kooha
+      - MissionCenter: io.missioncenter.MissionCenter
+      - Lutris: net.lutris.Lutris
+      - MangoHud: org.freedesktop.Platform.VulkanLayer.MangoHud
+      - Godot: org.godotengine.Godot
+      - FontDownloader: org.gustavoperedo.FontDownloader
+      - KiCad: org.kicad.KiCad
   - type: script
     scripts:
       # this sets up the proper policy & signing files for signed images to work
