@@ -133,7 +133,6 @@ modules:
       - virt-manager
       - tlp
       - tlp-rdw
-      - bottles
       - powertop
 #     - dnf5
 #     - dnf5-plugins
