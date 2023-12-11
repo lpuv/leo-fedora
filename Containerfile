@@ -12,7 +12,7 @@
 ARG IMAGE_MAJOR_VERSION=39
 ARG BASE_IMAGE_URL=ghcr.io/ublue-os/kionite-main
 
-FROM ${BASE_IMAGE_URL}:${IMAGE_MAJOR_VERSION}
+FROM ${BASE_IMAGE_URL}:39
 
 # The default recipe is set to the recipe's default filename
 # so that `podman build` should just work for most people.
@@ -29,11 +29,11 @@ COPY --from=ghcr.io/ublue-os/bling:latest /files /tmp/bling/files
 
 
 # Akmods
-COPY --from=ghcr.io/ublue-os/akmods:main-${IMAGE_MAJOR_VERSION} /rpms/kmods/*xpad*.rpm /tmp/akmods-rpms/
-COPY --from=ghcr.io/ublue-os/akmods:main-${IMAGE_MAJOR_VERSION} /rpms/kmods/*xone*.rpm /tmp/akmods-rpms/
-COPY --from=ghcr.io/ublue-os/akmods:main-${IMAGE_MAJOR_VERSION} /rpms/kmods/*openrazer*.rpm /tmp/akmods-rpms/
-COPY --from=ghcr.io/ublue-os/akmods:main-${IMAGE_MAJOR_VERSION} /rpms/kmods/*v4l2loopback*.rpm /tmp/akmods-rpms/
-COPY --from=ghcr.io/ublue-os/akmods:main-${IMAGE_MAJOR_VERSION} /rpms/kmods/*winesync*.rpm /tmp/akmods-rpms/
+COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms/kmods/*xpad*.rpm /tmp/akmods-rpms/
+COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms/kmods/*xone*.rpm /tmp/akmods-rpms/
+COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms/kmods/*openrazer*.rpm /tmp/akmods-rpms/
+COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms/kmods/*v4l2loopback*.rpm /tmp/akmods-rpms/
+COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms/kmods/*winesync*.rpm /tmp/akmods-rpms/
 RUN rpm-ostree install /tmp/akmods-rpms/*.rpm
 
 # Copy build scripts & configuration
