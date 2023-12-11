@@ -28,6 +28,8 @@ COPY --from=ghcr.io/ublue-os/bling:latest /rpms /tmp/bling/rpms
 COPY --from=ghcr.io/ublue-os/bling:latest /files /tmp/bling/files
 
 
+ADD https://negativo17.org/repos/fedora-multimedia.repo \
+    /etc/yum.repos.d/negativo17-fedora-multimedia.repo
 # Akmods
 COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms/kmods/*xpad*.rpm /tmp/akmods-rpms/
 COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms/kmods/*xone*.rpm /tmp/akmods-rpms/
