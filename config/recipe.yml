@@ -141,7 +141,7 @@ modules:
       - krb5-workstation
       - krb5-pkinit
       - libsecret
-      - librewolf
+     #- librewolf
       - gnome-keyring
       - mailspring
       - fedora-packager
