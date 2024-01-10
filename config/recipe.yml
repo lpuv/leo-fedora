@@ -97,7 +97,8 @@ modules:
       - onedrive
       - xwaylandvideobridge
       - distrobox 
-      #- libva-intel-driver
+      - power-profiles-daemon
+        #- libva-intel-driver
       #- mesa-va-drivers-freeworld
       - mesa-vdpau-drivers
       - mesa-va-drivers
