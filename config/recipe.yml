@@ -97,15 +97,18 @@ modules:
       - onedrive
       - xwaylandvideobridge
       - distrobox 
-      - libva-intel-driver
+      #- libva-intel-driver
       #- mesa-va-drivers-freeworld
       - mesa-vdpau-drivers-freeworld
+      - libavcodec-freeworld
       - ffmpeg
+      - radeontop
       - gstreamer1-plugin-libav
       - gstreamer1-plugins-bad-free-extras 
       - gstreamer1-plugins-ugly 
       - gstreamer1-vaapi 
       - steam-devices
+      - mesa-dri-drivers
       - wezterm
       - appimagelauncher
       #- VirtualBox
@@ -116,9 +119,9 @@ modules:
       - make
       - nodejs
       - latte-dock
-      - intel-gpu-tools
+      #- intel-gpu-tools
       - lm_sensors
-      - intel-media-driver
+      #- intel-media-driver
       - binutils
       - bat
       - gcc-c++
