@@ -22,6 +22,11 @@ scripts:
   # Custom RPM configuration.
   # These changes will be integrated into your custom image at the "system level".
 modules:
+  - type: script
+    scripts:
+      - power-profiles.sh
+      # this sets up the proper policy & signing files for signed images to work
+      - signing.sh
   - type: bling # configure what to pull in from ublue-os/bling
     install:
       - justfiles # add "!include /usr/share/ublue-os/just/100-bling.just"
@@ -195,8 +200,4 @@ modules:
       - Godot: org.godotengine.Godot
       - FontDownloader: org.gustavoperedo.FontDownloader
       - KiCad: org.kicad.KiCad
-  - type: script
-    scripts:
-      - power-profiles.sh
-      # this sets up the proper policy & signing files for signed images to work
-      - signing.sh
+  
