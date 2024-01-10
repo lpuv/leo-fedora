@@ -99,7 +99,8 @@ modules:
       - distrobox 
       #- libva-intel-driver
       #- mesa-va-drivers-freeworld
-      - mesa-vdpau-drivers-freeworld
+      - mesa-vdpau-drivers
+      - mesa-va-drivers
       - libavcodec-freeworld
       - ffmpeg
       - radeontop
