@@ -83,7 +83,7 @@ modules:
       - onedrive
       - xwaylandvideobridge
       - distrobox 
-      - power-profiles-daemon-0.13-6.fc39.x86_64
+      - power-profiles-daemon
         #- libva-intel-driver
       - mesa-va-drivers-freeworld
       #- mesa-vdpau-drivers-freeworld
