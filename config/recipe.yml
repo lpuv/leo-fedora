@@ -94,8 +94,8 @@ modules:
       - power-profiles-daemon
         #- libva-intel-driver
       #- mesa-va-drivers-freeworld
-      - mesa-vdpau-drivers
-      - mesa-va-drivers
+      - mesa-vdpau-drivers-freeworld
+      - mesa-va-drivers-freeworld
       - libavcodec-freeworld
       - ffmpeg
       - radeontop
@@ -159,7 +159,8 @@ modules:
       # Remove the native firefox (from Fedora) in favor of the Flatpak.
       - firefox
       - firefox-langpacks
-      - mesa-va-drivers-freeworld
+      - mesa-va-drivers
+      - mesa-vdpau-drivers
         #- libavfilter-free
         #    - libavformat-free 
         #- libavutil-free 
