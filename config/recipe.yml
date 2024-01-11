@@ -172,7 +172,7 @@ modules:
         #- steam-devices
   - type: script
     scripts:
-      codecs.sh
+      codecs2.sh
   - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
               #  will be installed and set up
     custom-flatpaks: # this section is optional
