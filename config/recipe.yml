@@ -160,7 +160,7 @@ modules:
       - firefox
       - firefox-langpacks
       #- mesa-va-drivers
-      - mesa-vdpau-drivers
+      #- mesa-vdpau-drivers
         #- libavfilter-free
         #    - libavformat-free 
         #- libavutil-free 
