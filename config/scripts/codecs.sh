@@ -21,5 +21,9 @@ rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld
 >>>>>>> 7696be2 (codecs script)
 =======
 #rpm-ostree override remove mesa-va-drivers
+<<<<<<< HEAD
 rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld --alllow-inactive
 >>>>>>> c595b89 (not installed??)
+=======
+rpm-ostree install mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld --allow-inactive
+>>>>>>> 8de6cb8 (typo, sigh)
