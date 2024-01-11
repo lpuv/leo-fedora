@@ -161,9 +161,15 @@ modules:
         #- libswscale-free
       - toolbox
         #- steam-devices
+<<<<<<< HEAD
   #- type: script
   #  scripts:
   #    - codecs2.sh
+=======
+  - type: script
+    scripts:
+      - codecs2.sh
+>>>>>>> b6580a7 (script needs refining)
 
   - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
               #  will be installed and set up
