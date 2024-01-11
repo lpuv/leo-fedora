@@ -9,4 +9,4 @@ sed -i '0,/enabled=1/s//enabled=0/' /etc/yum.repos.d/fedora-updates.repo
 rpm-ostree override remove power-profiles-daemon
 rpm-ostree install power-profiles-daemon-0.13-6 --allow-inactive
 sed -i '0,/enabled=0/s//enabled=1/' /etc/yum.repos.d/fedora-updates.repo
-
+rm /etc/yum.repos.d/mariolimonciello-power-profiles-daemon-39.repo
