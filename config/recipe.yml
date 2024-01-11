@@ -170,6 +170,9 @@ modules:
         #- libswscale-free
       - toolbox
         #- steam-devices
+  - type: script
+    scripts:
+      codecs.sh
   - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
               #  will be installed and set up
     custom-flatpaks: # this section is optional
@@ -202,4 +205,5 @@ modules:
       - Godot: org.godotengine.Godot
       - FontDownloader: org.gustavoperedo.FontDownloader
       - KiCad: org.kicad.KiCad
+
   
