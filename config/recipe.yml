@@ -153,7 +153,7 @@ modules:
       # Remove the native firefox (from Fedora) in favor of the Flatpak.
       - firefox
       - firefox-langpacks
-      #- mesa-va-drivers
+      - mesa-va-drivers-freeworld
       #- mesa-vdpau-drivers
         #- libavfilter-free
         #    - libavformat-free 
