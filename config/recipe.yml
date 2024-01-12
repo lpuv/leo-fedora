@@ -16,7 +16,7 @@ modules:
   - type: script
     scripts:
       - power-profiles.sh
-      - codecs.sh
+      #- codecs.sh
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
   - type: bling # configure what to pull in from ublue-os/bling
