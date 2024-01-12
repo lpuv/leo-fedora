@@ -11,16 +11,7 @@ image-version: 39 # latest is also supported if you want new updates ASAP
 # This description will be visible in the container metadata.
 description: This is my personal OS image.
 
-# These scripts will be executed during the container build.
-# Place scripts in the "scripts/" dir and put the corresponding filenames here.
-# Any files that aren't listed here won't be executed automatically, which
-# means that you can place "helper" or "library" scripts in the folder too.
-# You can use "autorun.sh" if you want an automatic runner.
-scripts:
-  # "Pre" scripts run very early in the build, immediately after your custom
-  # repos have been imported (so that you can access those repos if necessary).
-  # Custom RPM configuration.
-  # These changes will be integrated into your custom image at the "system level".
+
 modules:
   - type: script
     scripts:
