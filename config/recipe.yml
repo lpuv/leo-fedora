@@ -85,7 +85,11 @@ modules:
       - distrobox 
       - power-profiles-daemon
         #- libva-intel-driver
+<<<<<<< HEAD
       - mesa-va-drivers-freeworld
+=======
+      #- mesa-va-drivers-freeworld
+>>>>>>> 8d2036a (fixed by upstream)
       #- mesa-vdpau-drivers-freeworld
       #- mesa-va-drivers-freeworld-23.2.1-2.fc39.x86_64
       #- mesa-va-drivers-1
