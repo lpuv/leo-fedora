@@ -95,8 +95,8 @@ modules:
       - power-profiles-daemon
         #- libva-intel-driver
       #- mesa-va-drivers-freeworld
-      - mesa-vdpau-drivers-freeworld
-      - mesa-va-drivers-freeworld
+      #- mesa-vdpau-drivers-freeworld
+      #- mesa-va-drivers-freeworld
       - libavcodec-freeworld
       - ffmpeg
       - radeontop
