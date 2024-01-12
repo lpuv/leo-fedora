@@ -62,7 +62,7 @@ modules:
       #- http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       - https://rpm.craftcat.dev/leo.repo
-      #- https://negativo17.org/repos/fedora-multimedia.repo
+      - https://negativo17.org/repos/fedora-multimedia.repo
   
     # These RPMs will be installed from your enabled repositories (Fedora's own
     # repos, extra "repos" you've added, etc). The installation is automatically
