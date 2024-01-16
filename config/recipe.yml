@@ -43,6 +43,16 @@ modules:
                   # should be added into /usr/etc/ as that is the proper "distro"
                   # config directory on ostree. Read more in the files module's README
 
+  - type: akmods
+    install:
+      - openrazer
+      - openrgb
+      - v4l2loopback
+      - xone
+      - xpadneo
+      - xpad-noone
+      - winesync
+
   - type: rpm-ostree
     # A list of urls of ".repo" files that should be added to your system.
     # This is the proper way to add custom COPR repos to your image.
