@@ -134,6 +134,7 @@ modules:
       - fcitx5-table-extra
       - fcitx5-table-other
       - virt-manager
+      - virt-viewer
       - tlp
       - tlp-rdw
       - powertop
