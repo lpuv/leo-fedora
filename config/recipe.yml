@@ -81,6 +81,7 @@ modules:
     install:
       # Needed for yafti (the first boot installer). Remove if you're not using yafti.
       - python3-pip
+      - python3-devel
       - iasl
       # GNOME's GTK4 theme, Libadwaita. Already included in Silverblue, but not
       # other spins. You can remove if you aren't using yafti, but many native
