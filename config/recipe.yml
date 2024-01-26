@@ -50,7 +50,6 @@ modules:
       - v4l2loopback
       - xone
       - xpadneo
-      - xonedo
       - winesync
 
   - type: rpm-ostree
