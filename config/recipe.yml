@@ -79,7 +79,7 @@ modules:
     # performed via rpm-ostree during the image build, and will be pre-installed
     # at the "system level" in the final image.
     install:
-      # Needed for yafti (the first boot installer). Remove if you're not using yafti.
+    # Needed for yafti (the first boot installer). Remove if you're not using yafti.
       - python3-pip
       - python3-devel
       - iasl
@@ -170,50 +170,57 @@ modules:
       # Remove the native firefox (from Fedora) in favor of the Flatpak.
       - firefox
       - firefox-langpacks
-      #- mesa-vdpau-drivers
-        #- libavfilter-free
-        #    - libavformat-free 
-        #- libavutil-free 
-        #- libpostproc-free 
-        #- libswresample-free 
-        #- libswscale-free
       - toolbox
-        #- steam-devices
-  #- type: script
-  #  scripts:
-  #    - codecs2.sh
-
-  - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
-              #  will be installed and set up
-    custom-flatpaks: # this section is optional
-      - Gamescope: org.freedesktop.Platform.VulkanLayer.gamescope
-      - Celluloid: io.github.celluloid_player.Celluloid
-      - Krita: org.kde.krita
-      - Flatseal: com.github.tchx84.Flatseal
-      - Trilium: com.github.zadam.trilium
-      - Moonlight: com.moonlight_stream.Moonlight
-      - Spotify: com.spotify.Client
-      - SteamLink: com.valvesoftware.SteamLink
-      - YubicoAuth: com.yubico.yubioath
-      - LocalSend: org.localsend.localsend_app
-      - PrismLauncher: org.prismlauncher.PrismLauncher
-      - MenuLibre: org.bluesabre.MenuLibre
-      - LibreOffice: org.libreoffice.LibreOffice
+      
+  - type: default-flatpaks
+    notify: true   # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+      # - org.gnome.Loupe
+      # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
+      # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08).
+      # Only normal flatpak applications are (like Floorp Lightning web browser in this example).
+      # Multiple install of same flatpaks with different branches is not supported.
+      - org.freedesktop.Platform.VulkanLayer.gamescope
+      - io.github.celluloid_player.Celluloid
+      - org.kde.krita
+      - com.github.tchx84.Flatseal
+      - com.github.zadam.trilium
+      - com.moonlight_stream.Moonlight
+      - com.spotify.Client
+      - com.valvesoftware.SteamLink
+      - com.yubico.yubioath
+      - org.localsend.localsend_app
+      - org.prismlauncher.PrismLauncher
+      - org.bluesabre.MenuLibre
+      - org.libreoffice.LibreOffice
 #    - io.gitlab.librewolf-community
       #- org.freedesktop.Platform.ffmpeg-full
-      - Discord: com.discordapp.Discord
-      - UngoogledChromium: com.github.Eloston.UngoogledChromium
-      - Protontricks: com.github.Matoking.protontricks
-      - TLPui: com.github.d4nj1.tlpui
-      - PDFarranger: com.github.jeromerobert.pdfarranger
-      - Xournalpp: com.github.xournalpp.xournalpp
-      - Flemozi: dev.krtirtho.Flemozi
-      - Kooha: io.github.seadve.Kooha
-      - MissionCenter: io.missioncenter.MissionCenter
-      - Lutris: net.lutris.Lutris
-      - MangoHud: org.freedesktop.Platform.VulkanLayer.MangoHud
-      - Godot: org.godotengine.Godot
-      - FontDownloader: org.gustavoperedo.FontDownloader
-      - KiCad: org.kicad.KiCad
+      - com.discordapp.Discord
+      - com.github.Eloston.UngoogledChromium
+      - com.github.Matoking.protontricks
+      - com.github.d4nj1.tlpui
+      - com.github.jeromerobert.pdfarranger
+      - com.github.xournalpp.xournalpp
+      - dev.krtirtho.Flemozi
+      - io.github.seadve.Kooha
+      - io.missioncenter.MissionCenter
+      - net.lutris.Lutris
+      - org.freedesktop.Platform.VulkanLayer.MangoHud
+      - org.godotengine.Godot
+      - org.gustavoperedo.FontDownloader
+      - org.kicad.KiCad
+      remove:
+      # - org.gnome.eog
+      #
+    # A flatpak repo can also be added without having to install flatpaks,
+    # as long as one of the repo- fields is present
+    user:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
 
-  
+ 
