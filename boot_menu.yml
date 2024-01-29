@@ -1,5 +1,5 @@
 ublue_variants:
-  - label: ublue-os/startingpoint
+  - label: lpuv/leo-fedora
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: startingpoint
+      - label: leo-fedora

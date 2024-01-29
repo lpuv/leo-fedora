@@ -10,15 +10,15 @@
 
 # !! Warning: changing these might not do anything for you. Read comment above.
 ARG IMAGE_MAJOR_VERSION=39
-ARG BASE_IMAGE_URL=ghcr.io/ublue-os/silverblue-main
+ARG BASE_IMAGE_URL=ghcr.io/ublue-os/kionite-main
 
-FROM ${BASE_IMAGE_URL}:${IMAGE_MAJOR_VERSION}
+FROM ${BASE_IMAGE_URL}:39
 
 # The default recipe is set to the recipe's default filename
 # so that `podman build` should just work for most people.
 ARG RECIPE=recipe.yml 
 # The default image registry to write to policy.json and cosign.yaml
-ARG IMAGE_REGISTRY=ghcr.io/ublue-os
+ARG IMAGE_REGISTRY=ghcr.io/lpuv
 
 COPY cosign.pub /usr/share/ublue-os/cosign.pub
 
