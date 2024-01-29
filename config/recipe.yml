@@ -72,6 +72,7 @@ modules:
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       - https://rpm.craftcat.dev/leo.repo
       - https://negativo17.org/repos/fedora-multimedia.repo
+      - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-%OS_VERSION%.repo
   
     # These RPMs will be installed from your enabled repositories (Fedora's own
     # repos, extra "repos" you've added, etc). The installation is automatically
