@@ -45,8 +45,6 @@ modules:
 
   - type: akmods
     install:
-      - openrazer
-      - openrgb
       - v4l2loopback
       - xone
       - xpadneo
