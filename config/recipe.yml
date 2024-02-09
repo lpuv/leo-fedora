@@ -43,10 +43,10 @@ modules:
                   # should be added into /usr/etc/ as that is the proper "distro"
                   # config directory on ostree. Read more in the files module's README
 
-  - type: akmods
-    install:
-      - xone
-      - xpadneo
+#  - type: akmods
+#    install:
+#      - xone
+#      - xpadneo
 #      - winesync
 
   - type: rpm-ostree
