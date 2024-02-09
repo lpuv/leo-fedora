@@ -140,8 +140,8 @@ modules:
       - fcitx5-table-other
       - virt-manager
       - virt-viewer
-      - tlp
-      - tlp-rdw
+        #- tlp
+        #- tlp-rdw
       - powertop
 #     - dnf5
 #     - dnf5-plugins
