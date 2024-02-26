@@ -15,7 +15,6 @@ description: This is my personal OS image.
 modules:
   - type: script
     scripts:
-      - power-profiles.sh
       #- codecs.sh
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
