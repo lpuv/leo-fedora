@@ -161,6 +161,7 @@ modules:
       - freeipa-client
       - xfreerdp
       - rapid-photo-downloader
+      - redhat-lsb-core
 
       # These RPMs will be removed from the system image. This step happens during
       # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
@@ -169,6 +170,7 @@ modules:
       - firefox
       - firefox-langpacks
       - toolbox
+      - lsb_release
        
   - type: default-flatpaks
     notify: true   # Send notification after install/uninstall is finished (true/false)
