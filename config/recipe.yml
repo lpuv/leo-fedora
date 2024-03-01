@@ -160,8 +160,6 @@ modules:
       - portaudio-devel
       - freeipa-client
       - xfreerdp
-      - wine
-      - redhat-lsb-core
       - rapid-photo-downloader
 
       # These RPMs will be removed from the system image. This step happens during
@@ -171,8 +169,7 @@ modules:
       - firefox
       - firefox-langpacks
       - toolbox
-      - lsb_release
-      
+       
   - type: default-flatpaks
     notify: true   # Send notification after install/uninstall is finished (true/false)
     system:
