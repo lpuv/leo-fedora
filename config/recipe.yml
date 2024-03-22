@@ -70,6 +70,7 @@ modules:
       - https://negativo17.org/repos/fedora-multimedia.repo
       - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/erovia/wb32-dfu-updater/repo/fedora-%OS_VERSION%/erovia-wb32-dfu-updater-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/kylegospo/joycond/repo/fedora-%OS_VERSION%/kylegospo-joycond-%OS_VERSION%.repo
   
     # These RPMs will be installed from your enabled repositories (Fedora's own
     # repos, extra "repos" you've added, etc). The installation is automatically
@@ -165,7 +166,7 @@ modules:
       - redhat-lsb-core
       - xterm
       - wb32-dfu-updater
-      - kernel-modules-extra
+      - joycond
 
       # These RPMs will be removed from the system image. This step happens during
       # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
