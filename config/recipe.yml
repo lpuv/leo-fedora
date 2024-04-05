@@ -13,11 +13,7 @@ description: This is my personal OS image.
 
 
 modules:
-  - type: script
-    scripts:
-      #- codecs.sh
-      # this sets up the proper policy & signing files for signed images to work
-      - signing.sh
+  - type: signing
   #- type: bling # configure what to pull in from ublue-os/bling
    #install:
       #- justfiles # add "!include /usr/share/ublue-os/just/100-bling.just"
