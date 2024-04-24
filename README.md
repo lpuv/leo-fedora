@@ -101,6 +101,24 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
   sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/lpuv/leo-fedora:latest
+=======
+# BlueBuild Template &nbsp; [![build-ublue](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
+
+See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+
+After setup, it is recommended you update this README to describe your custom image.
+
+## Installation
+
+> **Warning**  
+> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+
+To rebase an existing atomic Fedora installation to the latest build:
+
+- First rebase to the unsigned image, to get the proper signing keys and policies installed:
+  ```
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/blue-build/template:latest
+>>>>>>> template/main
   ```
 - Reboot to complete the rebase:
   ```
@@ -120,28 +138,10 @@ This repository by default also supports signing.
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
-## ISO
+## Verification
 
-This template includes a simple Github Action to build and release an ISO of your image. 
+These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
-To run the action, simply edit the `boot_menu.yml` by changing all the references to `lpuv/leo-fedora` to your repository. This should trigger the action automatically.
-
-The Action uses [isogenerator](https://github.com/ublue-os/isogenerator) and works in a similar manner to the official Universal Blue ISO. If you have any issues, you should first check [the documentation page on installation](https://universal-blue.org/installation/). The ISO is a netinstaller and should always pull the latest version of your image.
-
-Note that this release-iso action is not a replacement for a full-blown release automation like [release-please](https://github.com/googleapis/release-please).
-
-## `just`
-
-The [`just`](https://just.systems/) command runner is included in all `ublue-os/main`-derived images.
-
-You need to have a `~/.justfile` with the following contents and `just` aliased to `just --unstable` (default in posix-compatible shells on ublue) to get started with just locally.
+```bash
+cosign verify --key cosign.pub ghcr.io/blue-build/template
 ```
-!include /usr/share/ublue-os/just/main.just
-!include /usr/share/ublue-os/just/nvidia.just
-!include /usr/share/ublue-os/just/custom.just
-```
-Then type `just` to list the just recipes available.
-
-The file `/usr/share/ublue-os/just/custom.just` is intended for the custom just commands (recipes) you wish to include in your image. By default, it includes the justfiles from [`ublue-os/bling`](https://github.com/ublue-os/bling), if you wish to disable that, you need to just remove the line that includes bling.just.
-
-See [the just-page in the Universal Blue documentation](https://universal-blue.org/guide/just/) for more information.
