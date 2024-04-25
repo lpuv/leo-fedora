@@ -116,7 +116,7 @@ modules:
       - python3-neovim
       - make
       - nodejs
-      - latte-dock
+      - plank
       #- intel-gpu-tools
       - lm_sensors
       #- intel-media-driver
