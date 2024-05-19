@@ -166,7 +166,6 @@ modules:
       - xterm
       - wb32-dfu-updater
       - joycond
-      - wine
       - strongswan
       - proxychains-ng
 
