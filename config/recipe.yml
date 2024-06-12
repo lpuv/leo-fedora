@@ -149,7 +149,7 @@ modules:
       - mailspring
       - fedora-packager
       - fedora-review
-      - rust2rpm
+      #- rust2rpm
       - copr-cli
       - awscli2
       - libimobiledevice-utils
