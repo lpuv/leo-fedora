@@ -95,7 +95,7 @@ modules:
       - rocminfo
       - rocm-opencl
       - rocm-clinfo
-      - rocclr
+      #- rocclr
       #- mesa-vdpau-drivers-freeworld
       #- mesa-va-drivers-freeworld-23.2.1-2.fc39.x86_64
       #- mesa-va-drivers-1
