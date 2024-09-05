@@ -71,7 +71,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/erovia/wb32-dfu-updater/repo/fedora-%OS_VERSION%/erovia-wb32-dfu-updater-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/kylegospo/joycond/repo/fedora-%OS_VERSION%/kylegospo-joycond-%OS_VERSION%.repo
       - https://repository.mullvad.net/rpm/stable/mullvad.repo
-  
+      - https://copr.fedorainfracloud.org/coprs/varlad/zellij/repo/fedora-%OS_VERSION%/varlad-zellij-%OS_VERSION%.repo
     # These RPMs will be installed from your enabled repositories (Fedora's own
     # repos, extra "repos" you've added, etc). The installation is automatically
     # performed via rpm-ostree during the image build, and will be pre-installed
@@ -174,6 +174,7 @@ modules:
       - discord
       - mullvad-vpn
       - kalendar
+      - zellij
 
       # These RPMs will be removed from the system image. This step happens during
       # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
