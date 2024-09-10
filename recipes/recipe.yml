@@ -72,6 +72,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/kylegospo/joycond/repo/fedora-%OS_VERSION%/kylegospo-joycond-%OS_VERSION%.repo
       - https://repository.mullvad.net/rpm/stable/mullvad.repo
       - https://copr.fedorainfracloud.org/coprs/varlad/zellij/repo/fedora-%OS_VERSION%/varlad-zellij-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-%OS_VERSION%.repo
     # These RPMs will be installed from your enabled repositories (Fedora's own
     # repos, extra "repos" you've added, etc). The installation is automatically
     # performed via rpm-ostree during the image build, and will be pre-installed
@@ -175,6 +176,27 @@ modules:
       - mullvad-vpn
       - kalendar
       - zellij
+      - hyprland
+      - hyprland-plugins
+      - xdg-desktop-portal-hyprland
+      - hyprland-autoname-workspaces
+      - hyprland-contrib
+      - hyprpaper
+      - hyprpicker
+      - hypridle
+      - hyprlock
+      - hyprshot
+      - waybar-git
+      - aylurs-gtk-shell
+      - cliphist
+      - nwg-clipman
+      - swww
+      - waypaper
+      - hyprnome
+      - hyprdim
+      - swaylock-effects
+      - pyprland
+      - mpvpaper
 
       # These RPMs will be removed from the system image. This step happens during
       # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
