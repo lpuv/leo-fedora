@@ -205,7 +205,7 @@ modules:
       - parallel
       - dunst
       - swayidle
-      - wlogouut
+      - wlogout
       - pavucontrol
       - qt6-qtbase-devel
       - kvantum
