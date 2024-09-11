@@ -202,6 +202,16 @@ modules:
       - nwg-look
       - network-manager-applet
       - brightnessctl
+      - parallel
+      - dunst
+      - swayidle
+      - wlogouut
+      - pavucontrol
+      - qt6-qtbase-devel
+      - kvantum
+      - qt6ct
+      - qt5ct
+      - fastfetch
       
       # These RPMs will be removed from the system image. This step happens during
       # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
