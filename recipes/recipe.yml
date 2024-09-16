@@ -216,6 +216,9 @@ modules:
       # HYPRLAND END
       - nautilus
       - NetworkManager-tui
+      - qemu
+      - qemu-user-static
+      - binfmt-support
       
       # These RPMs will be removed from the system image. This step happens during
       # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
